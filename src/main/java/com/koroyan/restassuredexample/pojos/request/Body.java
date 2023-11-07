@@ -5,15 +5,15 @@ import com.sun.xml.txw2.annotation.XmlNamespace;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlSeeAlso({AddInteger.class,FindPerson.class})
+@XmlSeeAlso({AddInteger.class,FindPerson.class,GetListByName.class})
 @XmlType(namespace = "http://tempuri.org")
 public class Body {
 
     @XmlAnyElement(lax = true)
     private Object object;
 
-    //AddInteger addInteger;
-    //FindPerson findPerson;
+    AddInteger addInteger;
+    FindPerson findPerson;
 
     public Body(){}
 
