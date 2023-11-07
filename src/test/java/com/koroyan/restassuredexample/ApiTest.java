@@ -58,10 +58,10 @@ public class ApiTest {
     @Test
     public void getListByNameTest() throws JSONException{
         String personName="Xavier";
-        GetListByNameResult apiPerson = step.getListByName(personName);
+        GetListByNameResult getListByNameResult = step.getListByName(personName);
 
-        GetListByNameResult databaseList = listByNameRepository.getListByName(personName);;
-        JSONAssert.assertEquals(apiPerson.toString(), databaseList.toString(), false);
+        GetListByNameResult getListByNameResultFromData = listByNameRepository.getListByName(personName);;
+        JSONAssert.assertEquals(getListByNameResult.toString(), getListByNameResultFromData.toString(), false);
     }
 
 }
